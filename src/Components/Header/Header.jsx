@@ -1,0 +1,1 @@
+// This is the application's header, where the score will be displayed
