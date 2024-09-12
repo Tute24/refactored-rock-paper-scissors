@@ -1,12 +1,12 @@
 export default function Header(props){
-    function handleInit(){
+    function initHandler(){
         props.setPlayerScore(0)
         props.setMachineScore(0)
     }
     return(
         <>
             <div>
-                <button type="button" id="initButton" onClick={() => handleInit()}>Initialize Game</button>
+                <button type="button" id="initButton" onClick={() => initHandler()}>Initialize Game</button>
             </div>
             <div>
                 <label htmlFor="playerScore">Player Score:</label>
