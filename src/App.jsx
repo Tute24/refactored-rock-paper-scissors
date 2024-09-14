@@ -11,37 +11,52 @@ function App() {
  const [lastSelected,setLastSelected] = useState(null)
  const [roundResult,setRoundResult] = useState(null)
  const [gameWinner, setGameWinner] = useState(null)   
-useEffect(()=>{
 
+
+useEffect(()=>{
     if(playerScore === 5){
         console.log("Won")
         setGameWinner("You won the game!")
     } else if(machineScore === 5){
         console.log("Lost")
         setGameWinner("The machine ended you!")
-    }
-
-    
-    
+    }  
 },[playerScore,machineScore])
 
+
+function renderHeader(){
+    if(!gameWinner){
+        return(<div>
+            <Header playerScore={playerScore} setPlayerScore={setPlayerScore} machineScore={machineScore} setMachineScore={setMachineScore} playerChoice={playerChoice} setPlayerChoice={setPlayerChoice} opponentChoice={opponentChoice} setOpponentChoice={setOpponentChoice} roundResult={roundResult} setRoundResult={setRoundResult}
+    />
+        </div>)
+    }
+}
 
 
  function renderPlayGame(){
     if(playerScore !== undefined && !gameWinner  ){
-        return (<div>
-        <Play playerChoice={playerChoice} setPlayerChoice={setPlayerChoice} opponentChoice={opponentChoice} setOpponentChoice={setOpponentChoice} lastSelected={lastSelected} setLastSelected={setLastSelected} playerScore={playerScore} setPlayerScore={setPlayerScore} machineScore={machineScore} setMachineScore={setMachineScore} roundResult={roundResult} setRoundResult={setRoundResult} />
-    <Game playerChoice={playerChoice} setPlayerChoice={setPlayerChoice} opponentChoice={opponentChoice} setOpponentChoice={setOpponentChoice} playerScore={playerScore} setPlayerScore={setPlayerScore} machineScore={machineScore} setMachineScore={setMachineScore} roundResult={roundResult} setRoundResult={setRoundResult}  />   
+        return (
+            <div>
+                <Play playerChoice={playerChoice} setPlayerChoice={setPlayerChoice} opponentChoice={opponentChoice} setOpponentChoice={setOpponentChoice} lastSelected={lastSelected} setLastSelected={setLastSelected} playerScore={playerScore} setPlayerScore={setPlayerScore} machineScore={machineScore} setMachineScore={setMachineScore} roundResult={roundResult} setRoundResult={setRoundResult} />
+
+                <Game playerChoice={playerChoice} setPlayerChoice={setPlayerChoice} opponentChoice={opponentChoice} setOpponentChoice={setOpponentChoice} playerScore={playerScore} setPlayerScore={setPlayerScore} machineScore={machineScore} setMachineScore={setMachineScore} roundResult={roundResult} setRoundResult={setRoundResult}  />   
     </div>)
- }else if(gameWinner){
-    return(<div>
-        <Result gameWinner={gameWinner}/>
-    </div>)
- } else{return null}}
+}
+    else if(gameWinner){
+        return(
+            <div>
+                <Result playerScore={playerScore} setPlayerScore={setPlayerScore} machineScore={machineScore} setMachineScore={setMachineScore} playerChoice={playerChoice} setPlayerChoice={setPlayerChoice} opponentChoice={opponentChoice} setOpponentChoice={setOpponentChoice} roundResult={roundResult} setRoundResult={setRoundResult} gameWinner={gameWinner} setGameWinner={setGameWinner} lastSelected={lastSelected} setLastSelected={setLastSelected}/>
+            </div>)
+} 
+    else{
+        return null
+}}
+
+
  return(
     <div>
-    <Header playerScore={playerScore} setPlayerScore={setPlayerScore} machineScore={machineScore} setMachineScore={setMachineScore} playerChoice={playerChoice} setPlayerChoice={setPlayerChoice} opponentChoice={opponentChoice} setOpponentChoice={setOpponentChoice} roundResult={roundResult} setRoundResult={setRoundResult}
-    />
+    {renderHeader()}
     {renderPlayGame()}
 </div>
 
