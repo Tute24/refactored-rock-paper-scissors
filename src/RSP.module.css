@@ -1,0 +1,178 @@
+.initButton{
+    cursor: pointer;
+    border-radius: 2rem;
+    border-style: solid;
+    height: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight:bold;
+    background-color: rgb(220, 220, 157);
+}
+
+.reinitButton{
+    cursor: pointer;
+    border-radius: 2rem;
+    border-style: solid;
+    height: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight:bold;
+    background-color: rgb(220, 220, 157);
+    
+}
+
+.initButton:hover{
+    background-color: rgb(234, 234, 196);
+}
+
+.reinitButton:hover{
+    background-color: rgb(234, 234, 196);
+}
+
+.scoreInputMachine{
+    border-radius: 2rem;
+    border-width: 0.3rem;
+    border-style: solid;
+    width: 2.5rem;
+    height: 1.5rem;
+    margin-left: 1rem;
+    margin-right:2rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+    border-color: #FF0000;
+}
+
+.scoreInputPlayer{
+    border-radius: 2rem;
+    border-width: 0.3rem;
+    border-style: solid;
+    width: 2.5rem;
+    height: 1.5rem;
+    margin-left: 1rem;
+    margin-right:2rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+    border-color: #32CD32;
+}
+
+.scoreLabel{
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.gameSpan{
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.choiceSpan{
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #1E90FF;
+}
+
+.gameButton{
+    background-color:#1E90FF;   
+    border-radius: 2rem ;
+    color: white;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    height:3.5rem;
+    width:9.5rem;
+    text-align: center;
+    border-style:ridge;
+    border-color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.gameButton:hover{
+    background-color:#4b85be;
+}
+
+.headerArea{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: lightgrey;
+    height:6rem
+    
+}
+
+.choiceArea{
+    display: flex;
+    place-content: center;
+    justify-content:center;
+    gap: 5rem;
+    margin-top: 5rem;
+}
+
+.roundResults{
+    align-items: center;
+    display: grid;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.finishedHeaderArea{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgrey;
+    height:6rem
+}
+
+.resultText{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+}
+
+.resultTextLost{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color:  #FF0000;
+}
+
+.resultTextWon{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color:  #32CD32;
+}
+
+.choicesText{
+    display: flex;
+    gap: 3rem;
+}
+
+.finishedGameArea{
+    display: grid;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.finishedGameText{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+}

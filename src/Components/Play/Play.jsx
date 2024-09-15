@@ -1,7 +1,8 @@
+import css from '../../RSP.module.css'
+
 
 export default function Play(props){
     let options = ["ROCK", "PAPER", "SCISSORS"]
-    
 
     function choiceHandler(ev){
         
@@ -42,10 +43,10 @@ export default function Play(props){
             } 
 }}
     return(
-        <>
-        <button type="button" className="choiceButtons" id="ROCK" onClick={choiceHandler}>ROCK</button>
-        <button type="button" className="choiceButtons" id="PAPER" onClick={choiceHandler}>PAPER</button>
-        <button type="button" className="choiceButtons" id="SCISSORS" onClick={choiceHandler}>SCISSORS</button>
-        </>
+        <div className={css.choiceArea}>
+        <button type="button" className={css.gameButton} id="ROCK" onClick={choiceHandler}>ROCK</button>
+        <button type="button" className={css.gameButton} id="PAPER" onClick={choiceHandler}>PAPER</button>
+        <button type="button" className={css.gameButton} id="SCISSORS" onClick={choiceHandler}>SCISSORS</button>
+        </div>
     )
 }

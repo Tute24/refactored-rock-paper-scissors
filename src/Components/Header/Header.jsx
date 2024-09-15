@@ -1,3 +1,5 @@
+import css from '../../RSP.module.css'
+
 export default function Header(props){
     function initHandler(){
         props.setPlayerScore(0)
@@ -9,16 +11,16 @@ export default function Header(props){
 
     
     return(
-        <>
+        <div className={css.headerArea}>
             <div>
-                <button type="button" id="initButton" onClick={() => initHandler()}>Initialize Game</button>
+                <button type="button" className={css.initButton} id="initButton" onClick={() => initHandler()}>Initialize Game</button>
             </div>
             <div>
-                <label htmlFor="playerScore">Player Score:</label>
-                <input type="text" id="playerScore" value={props.playerScore}  />
-                <label htmlFor="machineScore">Opponent Score:</label>
-                <input type="text" id="machineScore" value ={props.machineScore} />
+                <label htmlFor="playerScore" className={css.scoreLabel}>Player Score:</label>
+                <input type="text" id="playerScore" value={props.playerScore}  className={css.scoreInputPlayer}/>
+                <label htmlFor="machineScore" className={css.scoreLabel}>Opponent Score:</label>
+                <input type="text" id="machineScore" value ={props.machineScore} className={css.scoreInputMachine} />
             </div>
-        </>
+        </div>
     )
 }

@@ -3,6 +3,7 @@ import Header from './Components/Header/Header'
 import Play from './Components/Play/Play'
 import Game from './Components/Game/Game'
 import Result from './Components/Result/Result'
+
 function App() {
  const [playerScore,setPlayerScore] = useState()
  const [machineScore,setMachineScore] = useState ()
@@ -26,10 +27,10 @@ useEffect(()=>{
 
 function renderHeader(){
     if(!gameWinner){
-        return(<div>
+        return(<>
             <Header playerScore={playerScore} setPlayerScore={setPlayerScore} machineScore={machineScore} setMachineScore={setMachineScore} playerChoice={playerChoice} setPlayerChoice={setPlayerChoice} opponentChoice={opponentChoice} setOpponentChoice={setOpponentChoice} roundResult={roundResult} setRoundResult={setRoundResult}
     />
-        </div>)
+        </>)
     }
 }
 
@@ -37,17 +38,17 @@ function renderHeader(){
  function renderPlayGame(){
     if(playerScore !== undefined && !gameWinner  ){
         return (
-            <div>
+            <>
                 <Play playerChoice={playerChoice} setPlayerChoice={setPlayerChoice} opponentChoice={opponentChoice} setOpponentChoice={setOpponentChoice} lastSelected={lastSelected} setLastSelected={setLastSelected} playerScore={playerScore} setPlayerScore={setPlayerScore} machineScore={machineScore} setMachineScore={setMachineScore} roundResult={roundResult} setRoundResult={setRoundResult} />
 
                 <Game playerChoice={playerChoice} setPlayerChoice={setPlayerChoice} opponentChoice={opponentChoice} setOpponentChoice={setOpponentChoice} playerScore={playerScore} setPlayerScore={setPlayerScore} machineScore={machineScore} setMachineScore={setMachineScore} roundResult={roundResult} setRoundResult={setRoundResult}  />   
-    </div>)
+    </>)
 }
     else if(gameWinner){
         return(
-            <div>
+            <>
                 <Result playerScore={playerScore} setPlayerScore={setPlayerScore} machineScore={machineScore} setMachineScore={setMachineScore} playerChoice={playerChoice} setPlayerChoice={setPlayerChoice} opponentChoice={opponentChoice} setOpponentChoice={setOpponentChoice} roundResult={roundResult} setRoundResult={setRoundResult} gameWinner={gameWinner} setGameWinner={setGameWinner} lastSelected={lastSelected} setLastSelected={setLastSelected}/>
-            </div>)
+            </>)
 } 
     else{
         return null
@@ -55,10 +56,10 @@ function renderHeader(){
 
 
  return(
-    <div>
+    <>
     {renderHeader()}
     {renderPlayGame()}
-</div>
+</>
 
     )  
 }
