@@ -1,6 +1,4 @@
-*{
-    box-sizing: border-box;
-}
+
 
 .initButton{
     cursor: pointer;
@@ -11,7 +9,8 @@
     font-size: large;
     font-weight:bold;
     background-color: rgb(220, 220, 157);
-    width: 100%;
+    width: 90%;
+    max-width: 320px;
 }
 
 @media screen and (max-width: 768px) {
