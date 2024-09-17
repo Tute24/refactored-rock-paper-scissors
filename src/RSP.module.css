@@ -15,6 +15,7 @@
         flex-direction: column;
         height: auto;
         align-items: center;
+        width: 100%;
     }
     .roundResults{
         flex-direction: row;
@@ -39,6 +40,7 @@
 @media screen and (max-width: 480px) {
     .headerArea, .choiceArea,.roundResults {
         padding: 0.5rem;
+        width: 100%;
     }
     .scoreInputPlayer, .scoreInputMachine {
         width: 2.2rem; 
@@ -165,7 +167,7 @@
     align-items: center;
     background-color: lightgrey;
     height:6rem;
-    min-width: 320px;
+    box-sizing: border-box;
     white-space: nowrap;
     padding: 0 1rem;
     width:100%
