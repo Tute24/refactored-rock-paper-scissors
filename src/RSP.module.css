@@ -7,8 +7,23 @@
     font-size: large;
     font-weight:bold;
     background-color: rgb(220, 220, 157);
+    width: auto;
 }
 
+@media screen and (max-width: 768px) {
+    .headerArea {
+        flex-direction: column;
+        height: auto;
+    }}
+
+.scoreInputPlayer, .scoreInputMachine {
+        width: 2.2rem; 
+        font-size: 18px; 
+}
+
+.initButton{
+    font-size: medium;
+}
 .reinitButton{
     cursor: pointer;
     border-radius: 2rem;
@@ -100,10 +115,14 @@
 
 .headerArea{
     display:flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     background-color: lightgrey;
-    height:6rem
+    height:6rem;
+    min-width: 320px;
+    white-space: nowrap;
+    padding: 0 1rem;
+    
     
 }
 
