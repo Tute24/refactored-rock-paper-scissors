@@ -14,12 +14,42 @@
     .headerArea {
         flex-direction: column;
         height: auto;
-    }}
-
-.scoreInputPlayer, .scoreInputMachine {
-        width: 2.2rem; 
-        font-size: 18px; 
+        align-items: center;
+    }
+    .scoreInputPlayer, .scoreInputMachine {
+        width: 3rem; 
+        font-size: 16px; 
+    }
+    .initButton, .reinitButton {
+        font-size: small;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
 }
+
+@media screen and (max-width: 480px) {
+    .headerArea {
+        padding: 0.5rem;
+    }
+    .scoreInputPlayer, .scoreInputMachine {
+        width: 2.5rem; 
+        font-size: 14px; 
+    }
+    .initButton, .reinitButton {
+        font-size: small;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .headerArea {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+}
+
 
 .initButton{
     font-size: medium;
@@ -115,6 +145,7 @@
 
 .headerArea{
     display:flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background-color: lightgrey;
