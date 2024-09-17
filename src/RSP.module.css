@@ -7,7 +7,7 @@
     font-size: large;
     font-weight:bold;
     background-color: rgb(220, 220, 157);
-    width: auto;
+    width: 100%;
 }
 
 @media screen and (max-width: 768px) {
