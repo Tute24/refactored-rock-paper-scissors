@@ -15,7 +15,7 @@ export default function Header(props){
             <div>
                 <button type="button" className={css.initButton} id="initButton" onClick={() => initHandler()}>Initialize Game</button>
             </div>
-            <div>
+            <div className={css.scoreArea}>
                 <label htmlFor="playerScore" className={css.scoreLabel}>Player Score:</label>
                 <input type="text" id="playerScore" value={props.playerScore}  className={css.scoreInputPlayer}/>
                 <label htmlFor="machineScore" className={css.scoreLabel}>Opponent Score:</label>
