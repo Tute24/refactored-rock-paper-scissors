@@ -17,10 +17,10 @@ function App() {
 useEffect(()=>{
     if(playerScore === 5){
         console.log("Won")
-        setGameWinner("You won the game!")
+        setGameWinner("YOU WON THE GAME!")
     } else if(machineScore === 5){
         console.log("Lost")
-        setGameWinner("The machine ended you!")
+        setGameWinner("The MACHINE ENDED YOU!")
     }  
 },[playerScore,machineScore])
 
